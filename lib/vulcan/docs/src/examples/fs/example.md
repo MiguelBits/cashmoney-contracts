@@ -1,0 +1,95 @@
+## Examples
+### Reading files
+
+Read files as string or bytes
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+import {Test, expect, fs, BytesResult, StringResult} from "vulcan/test.sol";
+
+contract FsExample is Test {
+    // These files are available only on the context of vulcan
+    // You will need to provide your own files and edit the read permissions accordingly
+    string constant HELLO_WORLD = "./test/fixtures/fs/read/hello_world.txt";
+    string constant BINARY_TEST_FILE = "./test/fixtures/fs/write/test_binary.txt";
+
+    function test() external {
+        string memory stringResult = fs.readFile(HELLO_WORLD).unwrap();
+        expect(stringResult).toEqual("Hello, World!\n");
+
+        bytes memory bytesResult = fs.readFileBinary(HELLO_WORLD).unwrap();
+        expect(bytesResult).toEqual("Hello, World!\n");
+    }
+}
+
+```
+
+### Writing files
+
+Write files as strings or bytes
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+import {Test, expect, fs, BytesResult, StringResult, EmptyResult} from "vulcan/test.sol";
+
+contract FsExample is Test {
+    // These files are available only on the context of vulcan
+    // You will need to provide your own files and edit the read permissions accordingly
+    string constant TEXT_TEST_FILE = "./test/fixtures/fs/write/example.txt";
+
+    function test() external {
+        // Write string
+        fs.writeFile(TEXT_TEST_FILE, "This is a test").expect("Failed to write file");
+
+        string memory readStringResult = fs.readFile(TEXT_TEST_FILE).unwrap();
+
+        expect(readStringResult).toEqual("This is a test");
+
+        // Write binary
+        fs.writeFileBinary(TEXT_TEST_FILE, "This is a test in binary").expect("Failed to write file");
+
+        bytes memory readBytesResult = fs.readFileBinary(TEXT_TEST_FILE).unwrap();
+
+        expect(readBytesResult).toEqual("This is a test in binary");
+    }
+}
+
+```
+
+### Other operations
+
+Obtain metadata and check if file exists
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+import {Test} from "vulcan/test.sol";
+import {expect} from "vulcan/test/Expect.sol";
+import {fs, FsMetadata} from "vulcan/test/Fs.sol";
+import {BoolResult} from "vulcan/test/Result.sol";
+
+contract FsExample is Test {
+    // These files are available only on the context of vulcan
+    // You will need to provide your own files and edit the read permissions accordingly
+    string constant READ_EXAMPLE = "./test/fixtures/fs/read/hello_world.txt";
+    string constant NOT_FOUND_EXAMPLE = "./test/fixtures/fs/read/lkjjsadflkjasdf.txt";
+
+    function test() external {
+        FsMetadata memory metadata = fs.metadata(READ_EXAMPLE).expect("Failed to get metadata");
+        expect(metadata.isDir).toBeFalse();
+
+        bool exists = fs.fileExists(READ_EXAMPLE).unwrap();
+        expect(exists).toBeTrue();
+
+        exists = fs.fileExists(NOT_FOUND_EXAMPLE).unwrap();
+        expect(exists).toBeFalse();
+    }
+}
+
+```
+

@@ -1,0 +1,3 @@
+contract MyFeContract {
+    target: address
+}

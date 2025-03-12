@@ -1,0 +1,42 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development repo folders
+broadcast/
+node_modules/
+script/
+
+# ABI handling
+# First, don't ignore the abi directory itself
+!/abi/
+# Then ignore all contents of abi directory
+/abi/*
+# Finally whitelist specific files
+!/abi/BidWall.json
+!/abi/BurnTokensAction.json
+!/abi/BuyBackAction.json
+!/abi/DynamicFeeCalculator.json
+!/abi/DynamicFeeCalculatorV2.json
+!/abi/FairLaunch.json
+!/abi/FeeExemptions.json
+!/abi/Flaunch.json
+!/abi/FlaunchPremineZap.json
+!/abi/InitialPrice.json
+!/abi/MarketCappedPrice.json
+!/abi/MarketCappedPriceV3.json
+!/abi/Memecoin.json
+!/abi/MemecoinTreasury.json
+!/abi/Notifier.json
+!/abi/PauseCalculator.json
+!/abi/PoolSwap.json
+!/abi/PositionManager.json
+!/abi/ReferralEscrow.json
+!/abi/StaticFeeCalculator.json
+!/abi/TreasuryActionManager.json
+
+# Dotenv file
+.env
+
+# OS Files
+.DS_Store

@@ -1,0 +1,10 @@
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
+@optimism/=lib/optimism/packages/contracts-bedrock/src/
+@solady/=lib/solady/src/
+@uniswap/v3-core/=lib/v3-core/
+@uniswap/v4-core/=lib/v4-core/
+@uniswap-periphery/=lib/v4-periphery/src/
+
+@flaunch/=src/flaunchgg/contracts/
+@flaunch-interfaces/=src/flaunchgg/interfaces/
