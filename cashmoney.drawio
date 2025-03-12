@@ -13,7 +13,7 @@
         <mxCell id="cpoF_YOOKNL7qUSwxbyy-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF32F1;strokeWidth=5;" vertex="1" parent="1">
           <mxGeometry x="10" y="-250" width="460" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="cpoF_YOOKNL7qUSwxbyy-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cpoF_YOOKNL7qUSwxbyy-1" target="cpoF_YOOKNL7qUSwxbyy-4">
+        <mxCell id="cpoF_YOOKNL7qUSwxbyy-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cpoF_YOOKNL7qUSwxbyy-1" target="cpoF_YOOKNL7qUSwxbyy-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cpoF_YOOKNL7qUSwxbyy-1" value="STABILITY POOL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -29,7 +29,7 @@
           <mxGeometry x="570" y="220" width="110" height="70" as="geometry" />
         </mxCell>
         <mxCell id="cpoF_YOOKNL7qUSwxbyy-4" value="TREASURY" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="220" width="110" height="70" as="geometry" />
+          <mxGeometry x="350" y="220" width="110" height="70" as="geometry" />
         </mxCell>
         <mxCell id="cpoF_YOOKNL7qUSwxbyy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cpoF_YOOKNL7qUSwxbyy-7" target="cpoF_YOOKNL7qUSwxbyy-1">
           <mxGeometry relative="1" as="geometry" />
@@ -96,6 +96,9 @@
         </mxCell>
         <mxCell id="cpoF_YOOKNL7qUSwxbyy-45" value="EigenLayer&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="790" y="-110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cpoF_YOOKNL7qUSwxbyy-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.978;entryY=0.902;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cpoF_YOOKNL7qUSwxbyy-3" target="cpoF_YOOKNL7qUSwxbyy-40">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
